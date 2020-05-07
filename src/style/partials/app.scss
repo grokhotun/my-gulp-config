@@ -1,0 +1,190 @@
+//==================================================================================================//
+//             ПОДКЛЮЧЕНИЕ ДОПОЛНИТЕЛЬНЫХ ФАЙЛОВ СТИЛЕЙ                                             //
+//==================================================================================================//
+// @import "header.scss";
+// @import "footer.scss";
+
+//==================================================================================================//
+//             ОСНОВНЫЕ НАСТРОЙКИ                                                                   //
+//==================================================================================================//
+
+$fontfamily: "Montserrat";
+
+$minwidth: 320px;
+
+$maxwidth: 1400;
+
+@import "null.scss";
+
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.ibg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  img{
+    display: none;
+  }
+}
+.nocover { background-size: auto; }
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+
+
+$maxwidth1: $maxwidth+12;
+$maxwidth2:  992.98;
+$maxwidth3:  767.98;
+$maxwidth4:  479.98;
+
+.container {
+  max-width: $maxwidth+px;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: $maxwidth1+px) {max-width: 970px;}
+  @media (max-width: $maxwidth2+px) {max-width: 750px;}
+  @media (max-width: $maxwidth3+px) {max-width: none; padding: 0 10px;}
+
+}
+
+//==================================================================================================//
+//                              ОСНОВНОЙ БЛОК                                                       //
+//==================================================================================================//
+
+.introduction {
+  background-color: #28282A;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__main {
+  }
+
+  &__button {
+  }
+  &__time {
+  }
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin: 0px 15px 0px 0px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+}
+
+.header {
+
+  &__logo {
+  }
+
+  &__menu {
+  }
+
+  &__list {
+    display: flex;
+    li {
+      margin: 0px 10px 0px 10px;
+    }
+  }
+
+  &__link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  &__search {
+
+  }
+
+  &__input {
+
+  }
+
+  &__lk {
+  }
+}
+
+.search-content {
+
+  &__body {
+    position: relative;
+  }
+
+  &__input {
+    padding: 12px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    width: 434px;
+    height: 39px;
+    background: transparent;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+  }
+
+  &__icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 0;
+  }
+}
+
+
+
+.lk {
+  position: relative;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+
+  &__body {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.popular-games {
+}
+.feedbacks {
+}
+.news {
+}
