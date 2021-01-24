@@ -1,0 +1,22 @@
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	&__item {
+        font-size: 28px;
+		cursor: pointer;
+        &:before {
+            color: #FF6C00;
+            content: ' ☆ ';
+        }
+		&.is-active,
+		&.is-active ~ *,
+		&:hover,
+		&:hover ~ * {
+            &:before {
+                color: #FF6C00;
+                content: ' ★ ';
+            }
+		}
+	}
+}

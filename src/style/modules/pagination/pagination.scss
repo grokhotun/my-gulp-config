@@ -1,0 +1,84 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    // .pagination__arrow
+    &__arrow {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #FF9933;
+        border-radius: 50%;
+        position: relative;
+        // .pagination__arrow--prev
+        &--prev {
+            margin: 0px 21px 0px 0px;
+            &:before {
+                content:'';
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 17px;
+                height: 17px;
+                background: url('../img/icons/pagination-left.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+
+        // .pagination__arrow--next
+
+        &--next {
+            margin: 0px 0px 0px 21px;
+            &:before {
+                content:'';
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                transform: translate(-50%, -50%);
+                width: 17px;
+                height: 17px;
+                background: url('../img/icons/pagination-right.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    // .pagination__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        & > * {
+          &:not(:last-child) { margin: 0px 10px 0px 0px; }
+        }
+    }
+
+    &__item {
+    }
+
+    // .pagination__link
+
+    &__link {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #FF9933;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.is-active {
+            background-color: #FF9933;
+            color: $white;
+        }
+
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #444444;
+    }
+}

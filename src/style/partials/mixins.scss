@@ -1,0 +1,65 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+		font-display: swap;
+	}
+}
+
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+
+// @mixin adaptive-font($pcSize, $mobSize) {
+// 	$additionalSize: $pcSize - $mobSize;
+// 	$additionalMobSize: $additionalSize + $additionalSize * 0.7;
+// 	@media (max-width: $maxwidth3) {
+// 		font-size: calc(#{$mobSize + px} + #{$additionalMobSize} * ((100vw - 320px) / #{$maxwidth}));
+// 	}
+// 	@media (min-width: $maxwidth3) {
+// 		font-size: calc(#{$mobSize + px} + #{$additionalSize} * (100vw / #{$maxwidth}));
+// 	}
+// }
+
+@mixin responsiveFont($pcSize, $mobSize, $maxSize) {
+	$additionalSize: $pcSize - $mobSize;
+	@if $maxSize == 1 {
+		font-size: $pcSize + px;
+		@media (max-width: $maxwidth + px) {
+			font-size: calc(#{$mobSize + px} + #{$additionalSize} * ((100vw - 320px) / #{$maxwidth - 320}));
+		}
+	} @else {
+		font-size: calc(#{$mobSize + px} + #{$additionalSize} * ((100vw - 320px) / #{1920 - 320}));
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin no-touch-select {
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* prevent tap highlight color*/
+	-webkit-tap-highlight-color: transparent; /* prevent tap highlight color*/
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+@mixin scrollBarMovesPageNone {
+	html {
+		overflow-y: scroll;
+	}
+}

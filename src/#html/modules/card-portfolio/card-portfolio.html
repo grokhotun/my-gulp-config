@@ -1,0 +1,18 @@
+<div class="@@if(context.class){@@class }card-portfolio">
+    <div class="card-portfolio__header">
+        <div class="card-portfolio__preview">
+            <img src="./img/@@preview" alt="Превью сайта" />
+        </div>
+    </div>
+    <div class="card-portfolio__body">
+        <div class="card-portfolio__title">@@title</div>
+        <div class="card-portfolio__description">@@if(context.text) {<p class="card-portfolio__text">@@text</p>}</div>
+        <ul class="card-portfolio__stack">
+            @@for(let i = 0; i < stack.length; i++) {<li class="bubble">`+stack[i]+`</li>}
+        </ul>
+    </div>
+    <div class="card-portfolio__footer">
+        @@if(context.demo){<a href="@@demo" class="card-portfolio__button btn">Демо</a>}
+        @@if(context.source){<a href="@@source" class="card-portfolio__button btn">Код на github</a>}
+    </div>
+</div>

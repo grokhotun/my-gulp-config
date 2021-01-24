@@ -1,0 +1,47 @@
+.fullscreen {
+  display: flex;
+  min-height: 100vh;
+  background-color: $bg;
+  &__body {
+    padding: 20rem 0;
+    width: 100%;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    width: 376rem;
+    height: 376rem;
+    margin: 0 0 45rem;
+  }
+  &__title {
+    padding: 0 35rem;
+    @include responsiveFont(64, 28, 1);
+    text-align: center;
+    font-weight: 900;
+    margin: 0px 0px 172rem 0px;
+  }
+  &__logo {
+    width: 168rem;
+    height: 44rem;
+  }
+}
+.animation {
+  width: 100%;
+  height: 100%;
+  background: url('../img/animation.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  background: url('../img/name.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

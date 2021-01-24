@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    &__socials {
+        & > * {
+            &:not(:last-child) {
+                margin: 0px 15px 0px 0px;
+            }
+        }
+    }
+}

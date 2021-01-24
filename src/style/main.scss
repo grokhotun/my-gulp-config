@@ -1,0 +1,36 @@
+/*
+* Сторонние библиотеки
+*/
+// @import "libs/libs.scss";
+
+/*
+* Миксины, переменные
+*/
+@import "partials/mixins.scss";
+@import "partials/variables.scss";
+
+/*
+* Шрифты, обнуление/normalize
+*/
+// @import "partials/fonts.scss";
+@import "partials/null.scss";
+
+/*
+* Стили мелких компонентов
+*/
+// @import "partials/ui.scss";
+
+/*
+* Общий файл стилей
+*/
+@import "partials/app.scss";
+
+/*
+* Стили различных общих модулей
+*/
+// @import "modules/modules.scss";
+
+/*
+* Страницы по отдельности
+*/
+@import "pages/pages.scss";

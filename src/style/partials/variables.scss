@@ -1,0 +1,30 @@
+//Основные шрифты
+$root-font-size: 16px;
+$fontfamily: Noto Sans, sans-serif;
+
+$breakpoints: (
+  "phone"       : 400px,
+  "phone-wide"  : 480px,
+  "phablet"     : 560px,
+  "tablet-small": 640px,
+  "tablet"      : 768px,
+  "tablet-wide" : 1024px,
+  "desktop"     : 1248px,
+  "desktop-wide": 1440px
+);
+
+
+//Основные размеры экранов
+$minwidth: 320px;
+$maxwidth: 1600;
+
+$maxwidth1: $maxwidth + 12px;
+$maxwidth2:  991.98px;
+$maxwidth3:  767.98px;
+$maxwidth4:  479.98px;
+
+
+//Основная палитра цветов
+$white: #ffffff;
+$black: #000000;
+$bg: #007EDB;

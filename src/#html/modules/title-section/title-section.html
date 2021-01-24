@@ -1,0 +1,9 @@
+<div class="title-section">
+    @@if(context.mark) {
+        <div class="title-section__mark">
+            <span class="title-section__note @@if(context.black){title-section__title--black}">@@mark</span>
+        </div>
+    }
+    <span class="title-section__title @@if(context.black){title-section__title--black}">@@if(context.title){@@title}@@if(!context.title){Заголовок по умолчанию}</span>
+    @@if(context.subtitle){<p class="title-section__subtitle">@@subtitle</p>}
+</div>
